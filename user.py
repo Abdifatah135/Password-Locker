@@ -10,7 +10,7 @@ class User:
         
         self.first_name = first_name
         self.last_name = last_name
-        self.phone_number = number
+        self.password_number = number
         self.email = email
         
     # Init method up here
@@ -42,5 +42,5 @@ class User:
         '''
 
         for user in cls.user_list:
-            if user.phone_number == number:
+            if user.password_number == number:
                 return user
