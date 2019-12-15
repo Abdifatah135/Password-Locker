@@ -1,5 +1,5 @@
 import unittest
-
+import pyperclip
 from user import User
 
 
@@ -74,6 +74,19 @@ class TestUser(unittest.TestCase):
         found_user = User.find_by_number("112233tz")
 
         self.assertEqual(found_user.email, test_user.email)
+        
+    def test_user_exists(self):
+        '''
+        test to check if we can return a Boolean  if we cannot find the contact.
+        '''
+
+        self.new_user.save_user()
+        test_user = User("Test","user","112233tz","test@user.com") # new contact
+        test_user.save_user()
+
+        user_exists = User.user_exist("112233tz")
+
+        self.assertTrue(user_exists)
 
 
 if __name__ == '__main__':
