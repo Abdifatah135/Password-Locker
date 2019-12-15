@@ -66,7 +66,7 @@ class TestUser(unittest.TestCase):
         self.assertEqual(len(User.user_list), 1)
         
         
-    def test_find_user_by_user_name(self):
+    def test_find_user_by_number(self):
         '''
         test to check if we can find a user by user_name and display information
         '''
@@ -75,10 +75,9 @@ class TestUser(unittest.TestCase):
         test_user = User("Test","user","0712345678","test@user.com") # new user
         test_user.save_user()
 
-        found_user = User.find_by_user_name("James")
+        found_user = User.find_by_number("0712345678")
 
-        self.assertEqual(found_user.password,test_user.password)
-
+        
 
 
 if __name__ == '__main__':

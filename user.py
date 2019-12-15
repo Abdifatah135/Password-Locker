@@ -33,16 +33,16 @@ class User:
         User.user_list.remove(self)
         
     @classmethod
-    def find_by_user_name(cls,user_name):
+    def find_by_number(cls,number):
         '''
         Method that takes in a number and returns a user that matches that number.
 
         Args:
-            user_name: user_name to search for
+            number: phone_number to search for
         Returns :
-            User of person that matches the user_name.
+            User of person that matches the number.
         '''
 
         for user in cls.user_list:
-            if user.user_name == user_name:
+            if user.phone_number == number:
                 return user
