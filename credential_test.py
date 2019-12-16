@@ -17,7 +17,7 @@ class TestCredential(unittest.TestCase):
         """
 
         self.assertEqual(self.new_credential.account_name, "Twitter")
-        self.assertEqual(self.new_credential.password, "123245ke")
+        self.assertEqual(self.new_credential.password, "12345ke")
         
     def test_save_credential(self):
     
@@ -52,7 +52,7 @@ class TestCredential(unittest.TestCase):
         '''
         self.new_credential.save_credential()
         test_credential = Credential("Test", "12345ke",
-                               )  # new user
+                               )  # new credential
         test_credential.save_credential()
 
         self.new_credential.delete_credential()  # Deleting a credential object

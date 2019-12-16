@@ -1,12 +1,15 @@
 #!/usr/bin/env python3.6
 from user import User
+from credential import Credential
 
-def create_contact(fname,lname,password,email):
+def create_user(fname,lname,password,email):
     '''
     Function to create a new user
     '''
     new_user = User(fname,lname,password,email)
     return new_user
+
+
 
 def save_users(user):
     '''
@@ -108,6 +111,8 @@ def main():
                             break
                     else:
                             print("I really didn't get that. Please use the short codes")
+                            
+                            
 
 
 if __name__ == '__main__':
