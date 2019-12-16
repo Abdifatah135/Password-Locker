@@ -40,7 +40,7 @@ def display_users():
 
 def main():
     
-    print("Hello Welcome to your contact list. What is your name?")
+    print("Hello Welcome to your user list. What is your name?")
             
     fisrt_name = input()
 
