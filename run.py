@@ -5,5 +5,11 @@ def create_contact(fname,lname,password,email):
     '''
     Function to create a new user
     '''
-    new_contact = User(fname,lname,password,email)
+    new_user = User(fname,lname,password,email)
     return new_user
+
+def save_users(user):
+    '''
+    Function to save user
+    '''
+    user.save_user()
