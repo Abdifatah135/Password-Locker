@@ -29,12 +29,12 @@ class Credential:
     @classmethod
     def find_by_number(cls,password):
         '''
-        Method that takes in a password and returns a credential that matches that number.
+        Method that takes in a password and returns a credential that matches that password.
 
         Args:
-            password: password_number to search for
+            password: password to search for
         Returns :
-            Credential of person that matches the number.
+            Credential of person that matches the password.
         '''
 
         for credential in cls.credential_list:
